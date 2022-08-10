@@ -15,9 +15,9 @@ function MainHero() {
                         <Spacer className="h-[13px]"></Spacer>
                         <p className="text-primary-gray">* Did you know about our <b>60 day money back guarentee?</b></p>
                     </div>
-                </div>
-                <div className="absolute right-14 top-1/2 -translate-y-1/2">
-                    <img src="https://via.placeholder.com/743x612/" alt="placeholder" />
+                    <div className="absolute right-14 top-1/2 -translate-y-1/2">
+                        <img src="https://via.placeholder.com/743x612/" alt="placeholder" />
+                    </div>
                 </div>
             </div>
             <object className="absolute top-[31%] left-16" data="./shapes/shape-1.svg" type="image/svg+xml">
