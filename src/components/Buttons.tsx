@@ -4,7 +4,7 @@ import { SVGProps } from "react";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     title: string;
     url: string;
-    icon?: SVGElement;
+    icon?: any;
     iconPosition?: string;
 }
 
