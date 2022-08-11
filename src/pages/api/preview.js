@@ -22,3 +22,5 @@ export default function preview(req, res) {
 
 	return res.end();
 }
+
+//Access by visiting http://localhost:3000/api/preview?slug=the_slug&secret=the_token

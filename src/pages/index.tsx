@@ -12,7 +12,7 @@ const Home: NextPage = ({ data, preview }) => {
   const { data: homepage } = usePreviewSubscription(homepageQuery, {
     params: { slug: '/' },
     initialData: data,
-    enabled: false,
+    enabled: preview,
   });
 
   return (
@@ -22,7 +22,7 @@ const Home: NextPage = ({ data, preview }) => {
         <meta name="description" content="Landing pages made easy..." />
       </Head>
       <main>
-        <h1>{homepage.title}</h1>
+        <h1>{homepage?.title && <h1>{homepage.title}</h1>}</h1>
 
         <MainHero />
       </main>
