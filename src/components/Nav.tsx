@@ -14,9 +14,7 @@ function Nav() {
     return (
         <header className="px-6 max-w-6xl mx-auto py-6 flex justify-between items-center">
             <div aria-label="logo">
-                <object data="./exquisite-logo.svg" type="image/svg+xml">
-                    <img src="exquisite-logo.svg" alt="logo" />
-                </object>
+                <img src="exquisite-logo.svg" alt="logo" />
             </div>
             <nav className="hidden lg:block" aria-label="main-menu">
                 <ul className="space-x-10">

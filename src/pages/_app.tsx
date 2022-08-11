@@ -6,7 +6,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <>
       <Component {...pageProps} />
-      <Crisp />
+      {/* <Crisp /> */}
     </>
   );
 };

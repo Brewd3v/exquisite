@@ -9,6 +9,7 @@ import siteSettings from "./siteSettings";
 import hero from "./blocks/hero";
 import cta from "./blocks/cta";
 import homepage from "./homepage";
+import article from "./article";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -22,6 +23,7 @@ export default createSchema({
 		siteSettings,
 		homepage,
 		ctas,
+		article,
 
 		/** Blocks */
 		hero,
