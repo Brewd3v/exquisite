@@ -1,7 +1,7 @@
 import { BigButton, PrimaryButton } from "../Buttons"
 import Spacer from "../Spacer"
 
-function MainHero() {
+function Hero() {
     return (
         <div className="max-w-[1696px] mx-auto">
             <section className="bg-primary-light relative rounded-lg px-2 py-40  mx-10">
@@ -32,4 +32,4 @@ function MainHero() {
     )
 }
 
-export default MainHero
+export default Hero

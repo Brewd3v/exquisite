@@ -1,9 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { sanityClient, usePreviewSubscription } from "../../lib/sanity";
-
-
-import MainHero from "../components/sections/MainHero";
+import RenderSections from '../components/RenderSections'
 
 const homepageQuery = `*[_type == "homepage"][0]`
 
@@ -15,6 +13,8 @@ const Home: NextPage = ({ data, preview }) => {
     enabled: preview,
   });
 
+  const content = data.content
+
   return (
     <>
       <Head>
@@ -23,8 +23,7 @@ const Home: NextPage = ({ data, preview }) => {
       </Head>
       <main>
         <h1>{homepage?.title && <h1>{homepage.title}</h1>}</h1>
-
-        <MainHero />
+        {content && <RenderSections sections={content} />}
       </main>
     </>
   );
@@ -40,7 +39,7 @@ export const getStaticProps: GetStaticProps = async (context, preview = false) =
 
   return {
     props: {
-      data: { homepage },
+      data: { homepage, content: homepage.pageBuilder },
       preview
     }
   }
