@@ -1,3 +1,11 @@
+Work in progress here: 
+ [https://exquisite.brewdev.co.za/](https://exquisite.brewdev.co.za/)
+
+
+Working towards something like this:
+![Screenshot](01_home.png)
+
+
 ## Todos
 
 - [ x ] Complete this README 
@@ -35,9 +43,3 @@
 - [ ] Can this be more accesabile (Reduce motion, audit HTML, screen reader etc.)
 - [ ] !!Fix TS types for RenderSections and temp any fix in index. 
 
-Work in progress here: 
- [https://exquisite.brewdev.co.za/](https://exquisite.brewdev.co.za/)
-
-
-Working towards something like this:
-![Screenshot](01_home.png)
