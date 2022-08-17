@@ -2,9 +2,10 @@
 
 - [ x ] Complete this README 
 - [ x ] Add Sanity to this project
+- [ ] Publish Sanity somewhere (Checkout pico and other options)
 - [ ] Update Mobile views (currently not responsive)
 - [ ] Build out sections of the UI (and be editable in Sanity)
-    - [ x ] Hero
+    - [  ] Hero (add animation, scaling text, fix image placement)
     - [ x ] Stats and Testimonials 
     - [ x ] Cards
     - [ ] Alternating Image X Content sections
@@ -33,6 +34,9 @@
     - [ ] Chatbot
 - [ ] Can this be more accesabile (Reduce motion, audit HTML, screen reader etc.)
 - [ ] !!Fix TS types for RenderSections and temp any fix in index. 
+
+Work in progress here: 
+ [https://exquisite.brewdev.co.za/](https://exquisite.brewdev.co.za/)
 
 
 Working towards something like this:
