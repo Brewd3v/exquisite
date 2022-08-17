@@ -55,7 +55,7 @@ function Cards({ cards, heading, smallHeading }: Cards) {
                 </div>
             </div>
             <div className="md:absolute -bottom-[65%] left-1/2 -translate-x-1/2 max-w-6xl w-full">
-                <div className="grid px-6 sm:px-0 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+                <div className="grid px-6 sm:px-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-center">
                     {cards && cards.map((card, index) => (
                         <Card {...card} key={card._key} className={`${index % 2 === 0 ? '-translate-y-1/2' : '-translate-y-1/3'} `} />
                     ))}

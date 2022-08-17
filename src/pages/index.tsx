@@ -31,7 +31,6 @@ const homepageQuery = `*[_type == "homepage"][0]{
 }`
 
 const Home: NextPage = ({ data, preview }) => {
-  if (!data) return <div>Loading...</div>;
   const { data: homepage } = usePreviewSubscription(homepageQuery, {
     params: { slug: '/' },
     initialData: data,
