@@ -8,7 +8,7 @@ import { getClient } from '../../lib/sanity'
  * Helper function to return the correct version of the document
  * If we're in "preview mode" and have multiple documents, return the draft
  */
-function filterDataToSingleItem(data, preview) {
+function filterDataToSingleItem(data: any, preview: any) {
     if (!Array.isArray(data)) {
         return data
     }
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
     const pages = await getClient().fetch(allSlugsQuery)
 
     return {
-        paths: pages.map((slug) => `/${slug}`),
+        paths: pages.map((slug: string) => `/${slug}`),
         fallback: true,
     }
 }
@@ -54,7 +54,7 @@ export async function getStaticPaths() {
  * It's set by Next.js "Preview Mode" 
  * It does not need to be set or changed here
  */
-export async function getStaticProps({ params, preview = false }) {
+export async function getStaticProps({ params, preview = false }: any) {
     const query = groq`*[_type == "article" && slug.current == $slug]`
     const queryParams = { slug: params.slug }
     const data = await getClient(preview).fetch(query, queryParams)
@@ -79,7 +79,7 @@ export async function getStaticProps({ params, preview = false }) {
  * The `usePreviewSubscription` takes care of updating
  * the preview content on the client-side
  */
-export default function Page({ data, preview }) {
+export default function Page({ data, preview }: any) {
     const { data: previewData } = usePreviewSubscription(data?.query, {
         params: data?.queryParams ?? {},
         // The hook will return this on first render
