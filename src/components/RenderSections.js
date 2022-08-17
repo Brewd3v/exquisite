@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 import * as SectionComponents from "./sections";
 
 import capitalizeString from "../utils/capitalizeString";
+import PropTypes from "prop-types";
 
-function resolveSections(section: Section) {
+function resolveSections(section) {
 	// eslint-disable-next-line import/namespace
+
 	const Section = SectionComponents[capitalizeString(section._type)];
 
 	if (Section) {
@@ -16,7 +17,7 @@ function resolveSections(section: Section) {
 	return null;
 }
 
-function RenderSections(props: RenderSections) {
+function RenderSections(props) {
 	// console.log(SectionComponents);
 	const { sections } = props;
 
@@ -38,24 +39,24 @@ function RenderSections(props: RenderSections) {
 	);
 }
 
-interface RenderSections {
-	sections: Section[]
-}
+// interface RenderSections {
+// 	sections: Section[]
+// }
 
-interface Section {
-	_type: string,
-	_key: string,
-	sections: {}
-}
+// interface Section {
+// 	_type: string,
+// 	_key: string,
+// 	sections: {}
+// }
 
-// RenderSections.propTypes = {
-// 	sections: PropTypes.arrayOf(
-// 		PropTypes.shape({
-// 			_type: PropTypes.string,
-// 			_key: PropTypes.string,
-// 			section: PropTypes.instanceOf(PropTypes.object),
-// 		})
-// 	),
-// };
+RenderSections.propTypes = {
+	sections: PropTypes.arrayOf(
+		PropTypes.shape({
+			_type: PropTypes.string,
+			_key: PropTypes.string,
+			section: PropTypes.instanceOf(PropTypes.object),
+		})
+	),
+};
 
 export default RenderSections;

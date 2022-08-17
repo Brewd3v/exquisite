@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { sanityClient, usePreviewSubscription } from "../../lib/sanity";
-import RenderSections from '../components/RenderSections'
+import RenderSections from '../components/RenderSections.js'
 
 const homepageQuery = `*[_type == "homepage"][0]{
   title,
