@@ -30,7 +30,7 @@ const homepageQuery = `*[_type == "homepage"][0]{
   }
 }`
 
-const Home: NextPage = ({ data, preview }) => {
+const Home: NextPage = ({ data, preview }: any) => {
   const { data: homepage } = usePreviewSubscription(homepageQuery, {
     params: { slug: '/' },
     initialData: data,
