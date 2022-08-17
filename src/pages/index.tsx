@@ -3,7 +3,25 @@ import Head from "next/head";
 import { sanityClient, usePreviewSubscription } from "../../lib/sanity";
 import RenderSections from '../components/RenderSections'
 
-const homepageQuery = `*[_type == "homepage"][0]`
+const homepageQuery = `*[_type == "homepage"][0]{
+  title,
+  "content": pageBuilder[]{
+    _type != "statsAndTestimonials" => @,
+    _type == "statsAndTestimonials" => {
+      _key,
+      _type,
+      stats[]->{
+        stat,
+        statText
+      },
+      testimonials->{
+         quote,
+         company,
+         author
+      }
+    }
+  }
+}`
 
 const Home: NextPage = ({ data, preview }) => {
   if (!data) return <div>Loading...</div>;
@@ -13,7 +31,9 @@ const Home: NextPage = ({ data, preview }) => {
     enabled: preview,
   });
 
-  const content = data.content
+  const content = homepage.content
+
+  // console.log(content)
 
   return (
     <>
@@ -22,7 +42,6 @@ const Home: NextPage = ({ data, preview }) => {
         <meta name="description" content="Landing pages made easy..." />
       </Head>
       <main>
-        <h1>{homepage?.title && <h1>{homepage.title}</h1>}</h1>
         {content && <RenderSections sections={content} />}
       </main>
     </>
@@ -39,7 +58,7 @@ export const getStaticProps: GetStaticProps = async (context, preview = false) =
 
   return {
     props: {
-      data: { homepage, content: homepage.pageBuilder },
+      data: { homepage, content: homepage.content },
       preview
     }
   }

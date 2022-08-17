@@ -4,7 +4,7 @@ import * as SectionComponents from "./sections";
 
 import capitalizeString from "../utils/capitalizeString";
 
-function resolveSections(section) {
+function resolveSections(section: Section) {
 	// eslint-disable-next-line import/namespace
 	const Section = SectionComponents[capitalizeString(section._type)];
 
@@ -16,8 +16,8 @@ function resolveSections(section) {
 	return null;
 }
 
-function RenderSections(props) {
-	console.log(SectionComponents);
+function RenderSections(props: RenderSections) {
+	// console.log(SectionComponents);
 	const { sections } = props;
 
 	if (!sections) {
@@ -38,14 +38,24 @@ function RenderSections(props) {
 	);
 }
 
-RenderSections.propTypes = {
-	sections: PropTypes.arrayOf(
-		PropTypes.shape({
-			_type: PropTypes.string,
-			_key: PropTypes.string,
-			section: PropTypes.instanceOf(PropTypes.object),
-		})
-	),
-};
+interface RenderSections {
+	sections: Section[]
+}
+
+interface Section {
+	_type: string,
+	_key: string,
+	sections: {}
+}
+
+// RenderSections.propTypes = {
+// 	sections: PropTypes.arrayOf(
+// 		PropTypes.shape({
+// 			_type: PropTypes.string,
+// 			_key: PropTypes.string,
+// 			section: PropTypes.instanceOf(PropTypes.object),
+// 		})
+// 	),
+// };
 
 export default RenderSections;

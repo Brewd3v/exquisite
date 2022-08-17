@@ -10,6 +10,9 @@ import hero from "./blocks/hero";
 import cta from "./blocks/cta";
 import homepage from "./homepage";
 import article from "./article";
+import testimonials from "./testimonials";
+import stats from "./stats";
+import statsAndTestimonials from "./blocks/statsAndTestimonials";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,9 +27,11 @@ export default createSchema({
 		homepage,
 		ctas,
 		article,
-
+		testimonials,
+		stats,
 		/** Blocks */
 		hero,
 		cta,
+		statsAndTestimonials,
 	]),
 });

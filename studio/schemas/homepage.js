@@ -13,7 +13,7 @@ export default {
 			name: "pageBuilder",
 			title: "Page Builder",
 			type: "array",
-			of: [{ type: "hero" }, { type: "cta" }],
+			of: [{ type: "hero" }, { type: "cta" }, { type: "statsAndTestimonials" }],
 		},
 	],
 };
