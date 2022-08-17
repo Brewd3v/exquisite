@@ -15,7 +15,7 @@ interface Stat {
 function StatsAndTestimonials({ stats, testimonials: { author, company, quote } }: Props) {
 
     return (
-        <section className="max-w-[1200px] mx-auto py-10">
+        <section className="max-w-[1200px] mx-auto py-20">
             <div className="flex justify-center items-center flex-wrap">
                 <div className="flex divide-x">
                     <div className="text-center pr-10">

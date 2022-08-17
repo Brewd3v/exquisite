@@ -13,6 +13,7 @@ import article from "./article";
 import testimonials from "./testimonials";
 import stats from "./stats";
 import statsAndTestimonials from "./blocks/statsAndTestimonials";
+import cards from "./blocks/cards";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,5 +34,6 @@ export default createSchema({
 		hero,
 		cta,
 		statsAndTestimonials,
+		cards,
 	]),
 });

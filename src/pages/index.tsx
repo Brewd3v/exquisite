@@ -19,6 +19,13 @@ const homepageQuery = `*[_type == "homepage"][0]{
          company,
          author
       }
+    },
+    _type == "cards" => {
+      cards[]{
+        icons[][0],
+        text,
+        title
+      }
     }
   }
 }`

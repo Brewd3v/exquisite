@@ -3,7 +3,7 @@ import Spacer from "../Spacer"
 
 function Hero() {
     return (
-        <div className="max-w-[1696px] mx-auto">
+        <div className="max-w-[1696px] mx-auto overflow-x-hidden">
             <section className="bg-primary-light relative rounded-lg px-2 py-40  mx-10">
                 <div className="max-w-6xl h-full mx-auto px-6">
                     <div className="h-full flex justify-between items-center space-x-20">

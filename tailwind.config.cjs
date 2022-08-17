@@ -13,6 +13,9 @@ module.exports = {
 			fontFamily: {
 				jost: "Jost, sans-serif",
 			},
+			boxShadow: {
+				theme: "4px 0px 70px rgb(0, 0, 0, 0.08)",
+			},
 		},
 	},
 	plugins: [],
