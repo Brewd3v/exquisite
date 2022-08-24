@@ -10,10 +10,10 @@ function Cards({ cards, heading, smallHeading }: Cards) {
     });
 
     return (
-        <div className="px-6 relative" ref={ref}>
+        <div className="px-6 relative mb-[20%]" ref={ref}>
             <div className="relative bg-primary-light pt-32 pb-60 rounded-xl max-w-5xl mx-auto">
 
-                <TriangleHeading text={smallHeading} />
+                <TriangleHeading text={smallHeading} className="justify-center" />
 
                 <h2 className="text-center text-[48px] leading-[105px] font-bold text-secondary">{heading} <span className="bg-primary-medium leading-none inline-block">Platform</span></h2>
 

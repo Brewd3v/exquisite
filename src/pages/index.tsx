@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { sanityClient, usePreviewSubscription } from "../../lib/sanity";
 import RenderSections from '../components/RenderSections.js'
+import LeftRight from "../components/sections/LeftRight";
 
 const homepageQuery = `*[_type == "homepage"][0]{
   title,
@@ -49,6 +50,7 @@ const Home: NextPage = ({ data, preview }: any) => {
       </Head>
       <main>
         {content && <RenderSections sections={content} />}
+        <LeftRight />
       </main>
     </>
   );
