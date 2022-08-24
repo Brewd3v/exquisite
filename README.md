@@ -35,7 +35,7 @@ Working towards something like this:
     - [] Categories
     - [] Authors
     - [] Team members
-- [] Make the page loading time relistic
+- [] Make the page loading time realistic
     - [] Adding cookie banner (https://mxd.codes/articles/how-to-create-a-cookie-banner-for-your-react-application)
     - [] Fake Google Tag Manager
     - [] Fake FB pixel
