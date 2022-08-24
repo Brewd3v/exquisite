@@ -10,7 +10,7 @@ Working towards something like this:
 
 - [ x ] Complete this README 
 - [ x ] Add Sanity to this project
-- [ ] Publish Sanity somewhere (Checkout pico and other options)
+- [ x ] Publish Sanity somewhere (using sanity deploy on netlify)
 - [ ] Update Mobile views (currently not responsive)
 - [ ] Build out sections of the UI (and be editable in Sanity)
     - [  ] Hero (add animation, scaling text, fix image placement)
@@ -22,6 +22,7 @@ Working towards something like this:
     - [ ] Customer Logos
     - [ ] Bottom Cta 
     - [ ] Footer
+- [ x ] Add preview functionality
 - [ ] Build out a Blog
 - [ ] Create pages
     - [ ] About us 
@@ -41,5 +42,6 @@ Working towards something like this:
     - [ ] Fake GA4
     - [ ] Chatbot
 - [ ] Can this be more accesabile (Reduce motion, audit HTML, screen reader etc.)
+- [ ] Add E2E tests (Cypress)
 - [ ] !!Fix TS types for RenderSections and temp any fix in index. 
 
