@@ -36,7 +36,7 @@ Working towards something like this:
     - [ ] Authors
     - [ ] Team members
 - [ ] Make the page loading time realistic
-    - [ ] Adding cookie banner (https://mxd.codes/articles/how-to-create-a-cookie-banner-for-your-react-application)
+    - [ ] Adding cookie banner
     - [ ] Fake Google Tag Manager
     - [ ] Fake FB pixel
     - [ ] Fake GA4
